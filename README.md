@@ -299,6 +299,111 @@ After loading the data into Excel, the date was displayed in:
 DD-MM-YYYY
 
 Example
+28-JAN-US
+15-FEB-US
+03-MAR-US
+
+The information needed to be separated into:
+
+Manufacturing Date
+
+Country Code
+
+Method Used
+I used Power Query Extract and Delimiter functions.
+
+Steps
+Selected the Product ID column.
+
+Used the - delimiter.
+
+Extracted the required text before and after the delimiter.
+
+Separated the information into appropriate columns.
+
+Created the Manufacturing Date and Country Code fields.
+
+Result
+The Product ID information was separated into meaningful fields.
+
+Example:
+
+Manufacturing Date	Country Code
+28-01-2026	US
+15-02-2026	US
+03-03-2026	US
+
+4.2 Creating the Manufacturing Date
+Method Used
+I used Power Query to create the Manufacturing Date from the extracted Product ID information.
+
+Steps
+Used the extracted date components.
+
+Created the Manufacturing Date using Power Query.
+
+Changed the column data type to Date.
+
+Loaded the transformed data back into Excel.
+
+Result
+The Manufacturing Date was stored as a proper Date value instead of text.
+
+4.3 Merging Product Name and Brand Name
+What I Needed to Do
+The assignment required the Product Name and Brand Name to be combined into a new column called:
+
+Product Brand
+
+Method Used
+I used Microsoft Excel and the & operator.
+
+Steps
+Created a new column named Product Brand.
+
+Used the formula:
+
+=B2&" "&C2
+
+Filled the formula down for all records.
+
+Example
+Laptop + Dell → Laptop Dell
+
+Result
+A new Product Brand column was created containing the combined Product Name and Brand Name.
+
+Question 5: Number Formatting
+5.1 Formatting Price as Currency
+Method Used
+I used Microsoft Excel to format the Price column as currency.
+
+Steps
+Selected the Price column.
+
+Opened the Number Format options.
+
+Selected Currency.
+
+Applied the Indian Rupee (₹) format.
+
+Example
+1000 → ₹1,000.00
+950  → ₹950.00
+130  → ₹130.00
+
+Result
+The Price column was displayed in a consistent currency format.
+
+5.2 Formatting Manufacturing Date
+Method Used
+I used Power Query to convert the Manufacturing Date into a proper Date data type.
+
+After loading the data into Excel, the date was displayed in:
+
+DD-MM-YYYY
+
+Example
 28-01-2026
 05-02-2026
 03-03-2026
@@ -385,6 +490,14 @@ Merging Product Name and Brand Name using Excel.
 Formatting Price as Indian currency.
 
 Converting Manufacturing Date to a proper date.
+
+Applying conditional formatting to Price and Category.
+
+The final dataset is clean, consistent, structured, and ready for further analysis.
+
+Tools Used
+Microsoft Power Query
+Microsoft Excel
 
 Applying conditional formatting to Price and Category.
 
